@@ -1,5 +1,15 @@
-from modules import os
+from modules import os, pymysql
 get_dir = os.path.dirname(__file__)
+
+connection = {
+    'db':{
+        'database': 'dbCadastro',
+        'charset': 'utf8mb4',
+        'cursorclass': pymysql.cursors.DictCursor,
+        'host': 'localhost',
+        'username': 'root', 
+    },
+}
 
 interface = {
     'palette': {
